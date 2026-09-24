@@ -2,10 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Engine/MemberReference.h"
 #include "ListenerComponent.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Observer), meta=(BlueprintSpawnableComponent) )
 class OBSERVERCOMPONENTS_API UListenerComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -15,7 +16,7 @@ public:
 	UListenerComponent();
 
 protected:
-	UPROPERTY(EditDefaultsOnly, meta = (FunctionReference, PrototypeFunction="/Script/ObserverComponents.ListenerComponent.Blah", DefaultBindingName="Trigger"))
+	UPROPERTY(EditDefaultsOnly, Category=Observer, meta = (FunctionReference, PrototypeFunction="/Script/ObserverComponents.ListenerComponent.Blah", DefaultBindingName="Trigger"))
 	FMemberReference CalledFunction;
 
 	UFUNCTION(BlueprintInternalUseOnly)

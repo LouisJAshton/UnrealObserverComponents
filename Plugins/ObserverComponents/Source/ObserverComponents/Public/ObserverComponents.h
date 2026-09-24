@@ -2,8 +2,9 @@
 
 #pragma once
 
-//#include "Modules/ModuleManager.h"
 #include "CoreMinimal.h"
+#include "Modules/ModuleInterface.h"
+#include "Modules/ModuleManager.h"
 
 class FObserverComponentsModule : public IModuleInterface
 {

@@ -2,8 +2,6 @@
 
 #include "BroadcastComponent.h"
 #include "BroadcastLinkVisualiser.h"
-#include "Modules/ModuleInterface.h"
-#include "Modules/ModuleManager.h"
 #include "UnrealEd.h"
 
 #define LOCTEXT_NAMESPACE "FObserverComponentsEditorModule"

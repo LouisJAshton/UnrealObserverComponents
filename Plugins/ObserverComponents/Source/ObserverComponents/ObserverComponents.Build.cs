@@ -26,6 +26,8 @@ public class ObserverComponents : ModuleRules
 			new string[]
 			{
 				"Core",
+				"CoreUObject",
+				"Engine",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -42,9 +44,9 @@ public class ObserverComponents : ModuleRules
 			}
 			);
 		
-		if (Target.bBuildEditor) {
-			PrivateDependencyModuleNames.Add("UnrealEd");
-		}
+		// if (Target.bBuildEditor) {
+		// 	PrivateDependencyModuleNames.Add("UnrealEd");
+		// }
 		
 		DynamicallyLoadedModuleNames.AddRange(
 			new string[]

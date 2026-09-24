@@ -7,7 +7,7 @@
 
 class UListenerComponent;
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Observer), meta=(BlueprintSpawnableComponent) )
 class OBSERVERCOMPONENTS_API UBroadcastComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -18,11 +18,11 @@ public:
 
 protected:
 
-	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, meta=(UseComponentPicker, AllowAnyActor, AllowedClasses="ListenerComponent"))
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category=Observer, meta=(UseComponentPicker, AllowAnyActor, AllowedClasses="ListenerComponent"))
 	TSet<FComponentReference> Listeners;
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category=Observer)
 	void Broadcast() const;
 
 	TArray<const UListenerComponent*> GetListenerComponents() const;

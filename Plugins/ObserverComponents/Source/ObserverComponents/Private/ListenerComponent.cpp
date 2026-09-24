@@ -1,5 +1,6 @@
 ﻿
 #include "ListenerComponent.h"
+#include "GameFramework/Actor.h"
 
 // Sets default values for this component's properties
 UListenerComponent::UListenerComponent()
